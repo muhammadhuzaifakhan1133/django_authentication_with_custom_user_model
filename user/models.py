@@ -11,6 +11,7 @@ class UserModel(AbstractBaseUser, PermissionsMixin):
     phone = models.CharField(max_length=50, blank=True)
     created_at = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)
+    # is_staff field is necessary for admin page login
     is_staff = models.BooleanField(default=True)
 
     objects = UserManager()
